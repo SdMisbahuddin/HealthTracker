@@ -1,0 +1,239 @@
+.goals-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  
+  color: #333; /* Default text color for light mode */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for mode changes */
+}
+
+.goals-page.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.goals-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.goals-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.goals-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.goals-subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+.goals-page.dark .goals-subtitle {
+  color: #aaa; /* Lighter gray for dark mode */
+}
+
+.goals-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.goals-page.dark .tab {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.goals-page.dark .tab.active {
+  background-color: #1e90ff; /* Slightly lighter blue for dark mode */
+}
+
+.add-goal-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.goals-page.dark .add-goal-btn {
+  background-color: #1e90ff; /* Slightly lighter blue for dark mode */
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.goals-page.dark .goal-card {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.goal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.goal-header svg {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.goals-page.dark .goal-header svg {
+  color: #1e90ff; /* Match the button color in dark mode */
+}
+
+.goal-content {
+  text-align: left;
+}
+
+.goal-progress {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.goals-page.dark .goal-progress {
+  color: #aaa;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.goals-page.dark .progress-bar {
+  background-color: #444;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #6be0e2, #1e90ff); 
+  transition: width 0.3s ease-in-out;
+}
+
+.goals-page.dark .progress-fill {
+  background: linear-gradient(to right, #6be0e2, #1e90ff); /* Adjusted colors for dark mode */
+}
+
+.goal-stats {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.goal-remaining {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.goals-page.dark .goal-remaining {
+  color: #aaa;
+}
+
+.goal-points {
+  font-size: 0.9rem;
+  color: #28a745;
+  margin-top: 5px;
+}
+
+.goals-page.dark .goal-points {
+  color: #2ecc71; /* Lighter green for dark mode */
+}
+
+.points {
+  font-weight: bold;
+}
+
+.add-goal-form {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.goals-page.dark .add-goal-form {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.add-goal-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.add-goal-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.goals-page.dark .add-goal-form input {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.add-goal-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.goals-page.dark .add-goal-form button {
+  background-color: #1e90ff;
+}
